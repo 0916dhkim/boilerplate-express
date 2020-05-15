@@ -94,7 +94,13 @@ app.get("/name", function(req, res) {
 
 
 /** 12) Get data form POST  */
-
+app.post("/name", function(req, res) {
+    const first = req.query.first;
+    const last = req.query.last;
+    res.json({
+        name: `${first} ${last}`
+    })
+});
 
 
 // This would be part of the basic setup of an Express app
