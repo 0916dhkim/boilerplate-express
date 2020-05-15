@@ -13,6 +13,12 @@ console.log("Hello World");
 
 
 /** 2) A first working Express Server */
+const port = process.env.PORT || 3000;
+app.listen(port);
+
+app.get("/", function(req, res) {
+    res.send("Hello Express");
+});
 
 
 /** 3) Serve an HTML file */
