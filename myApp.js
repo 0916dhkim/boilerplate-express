@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 const path = require("path");
+require("dotenv").config();
 
 // --> 7)  Mount the Logger middleware here
 
