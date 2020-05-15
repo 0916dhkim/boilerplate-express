@@ -95,8 +95,8 @@ app.get("/name", function(req, res) {
 
 /** 12) Get data form POST  */
 app.post("/name", function(req, res) {
-    const first = req.query.first;
-    const last = req.query.last;
+    const first = req.body.first;
+    const last = req.body.last;
     res.json({
         name: `${first} ${last}`
     })
