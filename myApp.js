@@ -1,6 +1,7 @@
 
 var express = require('express');
 var app = express();
+const path = require("path");
 
 // --> 7)  Mount the Logger middleware here
 
@@ -13,12 +14,16 @@ console.log("Hello World");
 
 
 /** 2) A first working Express Server */
-app.get("/", function(req, res) {
-    res.send("Hello Express");
-});
+// app.get("/", function(req, res) {
+//     res.send("Hello Express");
+// });
 
 
 /** 3) Serve an HTML file */
+const absolutePath = path.join(__dirname, "views", "index.html");
+app.get("/", function(req, res){ 
+    res.sendfile(absolutePath);
+});
 
 
 /** 4) Serve static assets  */
