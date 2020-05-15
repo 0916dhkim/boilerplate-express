@@ -27,6 +27,8 @@ app.get("/", function(req, res){
 
 
 /** 4) Serve static assets  */
+const assetPath = path.join(__dirname, "public");
+app.use(express.static(assetPath));
 
 
 /** 5) serve JSON on a specific route */
